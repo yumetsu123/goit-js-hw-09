@@ -9,7 +9,7 @@ const formData = {
 
 const formState = localStorage.getItem('feedback-form-state');
 
-if (formData) {
+if (formState) {
     const jsonData = JSON.parse(formState);
     formData.email = jsonData.email;
     formData.message = jsonData.message;
