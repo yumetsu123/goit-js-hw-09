@@ -10,7 +10,7 @@ const formData = {
 const formState = localStorage.getItem('feedback-form-state');
 
 if (formData) {
-    const jsonData = JSON.parse(formData);
+    const jsonData = JSON.parse(formState);
     formData.email = jsonData.email;
     formData.message = jsonData.message;
     emailInput.value = formData.email;
@@ -35,5 +35,4 @@ form.addEventListener('submit', e => {
     form.reset();
     formData.email = '';
     formData.message = '';
-    console.log(formData)
 })
